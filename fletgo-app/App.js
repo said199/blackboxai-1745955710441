@@ -15,6 +15,7 @@ import { EditProfileScreen } from './src/screens/EditProfileScreen';
 import { DrawerContent } from './src/navigation/DrawerContent';
 import { DriverVerificationScreen } from './src/screens/DriverVerificationScreen';
 import { BasicInfoScreen } from './src/screens/BasicInfoScreen';
+import { IdCardScreen } from './src/screens/IdCardScreen';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -46,6 +47,14 @@ function HomeDrawer() {
       <Drawer.Screen 
         name="BasicInfo" 
         component={BasicInfoScreen}
+        options={{
+          drawerLabel: () => null,
+          drawerItemStyle: { height: 0 }
+        }}
+      />
+      <Drawer.Screen 
+        name="IdCard" 
+        component={IdCardScreen}
         options={{
           drawerLabel: () => null,
           drawerItemStyle: { height: 0 }
