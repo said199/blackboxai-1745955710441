@@ -187,6 +187,7 @@ const styles = StyleSheet.create({
   userSection: {
     paddingHorizontal: 20,
     paddingVertical: 20,
+    backgroundColor: '#004D40',
     borderBottomWidth: 1,
     borderBottomColor: colors.inputBg,
   },
@@ -199,6 +200,8 @@ const styles = StyleSheet.create({
     height: 60,
     borderRadius: 30,
     backgroundColor: colors.inputBg,
+    borderWidth: 2,
+    borderColor: '#FFFFFF',
   },
   userInfo: {
     flex: 1,
@@ -206,21 +209,25 @@ const styles = StyleSheet.create({
   },
   editButton: {
     padding: 8,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 20,
   },
   userName: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: colors.primary,
+    color: '#FFFFFF',
   },
   userEmail: {
     fontSize: 14,
-    color: colors.text,
+    color: '#FFFFFF',
     marginTop: 4,
+    opacity: 0.9,
   },
   location: {
     fontSize: 14,
-    color: colors.text,
+    color: '#FFFFFF',
     marginTop: 4,
+    opacity: 0.9,
   },
   drawerContent: {
     flex: 1,
