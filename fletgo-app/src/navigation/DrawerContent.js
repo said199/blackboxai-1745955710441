@@ -132,7 +132,9 @@ export function DrawerContent(props) {
             label={isDriverMode ? "Modo Cliente" : "Modo Conductor"}
             onPress={() => {
               if (!isDriverMode) {
-                props.navigation.navigate('DriverVerification');
+                props.navigation.navigate('DriverVerification', {
+                  screen: 'VerificationMain'
+                });
                 props.navigation.closeDrawer();
               } else {
                 toggleDriverMode(props.navigation);
