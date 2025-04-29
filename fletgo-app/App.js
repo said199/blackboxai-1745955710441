@@ -9,10 +9,10 @@ import { UserModeProvider } from './src/context/UserModeContext';
 import { UserProvider } from './src/context/UserContext';
 import LoginScreen from './src/screens/LoginScreen';
 import RegisterScreen from './src/screens/RegisterScreen';
-import VerificationScreen from './src/screens/VerificationScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import { EditProfileScreen } from './src/screens/EditProfileScreen';
 import { DrawerContent } from './src/navigation/DrawerContent';
+import { DriverVerificationScreen } from './src/screens/DriverVerificationScreen';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -32,6 +32,15 @@ function HomeDrawer() {
       }}
     >
       <Drawer.Screen name="HomeScreen" component={HomeScreen} />
+      <Drawer.Screen name="EditProfile" component={EditProfileScreen} />
+      <Drawer.Screen 
+        name="DriverVerification" 
+        component={DriverVerificationScreen}
+        options={{
+          drawerLabel: () => null,
+          drawerItemStyle: { height: 0 }
+        }}
+      />
     </Drawer.Navigator>
   );
 }
@@ -41,20 +50,18 @@ export default function App() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <UserModeProvider>
         <UserProvider>
-        <NavigationContainer>
-          <StatusBar style="dark" />
-          <Stack.Navigator
-            screenOptions={{
-              headerShown: false
-            }}
-          >
-            <Stack.Screen name="Login" component={LoginScreen} />
-            <Stack.Screen name="Register" component={RegisterScreen} />
-            <Stack.Screen name="Verification" component={VerificationScreen} />
-            <Stack.Screen name="Home" component={HomeDrawer} />
-            <Stack.Screen name="EditProfile" component={EditProfileScreen} />
-          </Stack.Navigator>
-        </NavigationContainer>
+          <NavigationContainer>
+            <StatusBar style="dark" />
+            <Stack.Navigator
+              screenOptions={{
+                headerShown: false
+              }}
+            >
+              <Stack.Screen name="Login" component={LoginScreen} />
+              <Stack.Screen name="Register" component={RegisterScreen} />
+              <Stack.Screen name="Home" component={HomeDrawer} />
+            </Stack.Navigator>
+          </NavigationContainer>
         </UserProvider>
       </UserModeProvider>
     </GestureHandlerRootView>
