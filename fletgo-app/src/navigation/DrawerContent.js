@@ -130,7 +130,14 @@ export function DrawerContent(props) {
               />
             )}
             label={isDriverMode ? "Modo Cliente" : "Modo Conductor"}
-            onPress={toggleDriverMode}
+            onPress={() => {
+              if (!isDriverMode) {
+                props.navigation.navigate('DriverVerification');
+                props.navigation.closeDrawer();
+              } else {
+                toggleDriverMode(props.navigation);
+              }
+            }}
             labelStyle={[
               styles.drawerLabel,
               isDriverMode && styles.activeLabel
