@@ -77,25 +77,25 @@ export function DriverVerificationScreen({ navigation }) {
         <VerificationItem 
           title="Licencia de conducir"
           icon="car-key"
-          onPress={() => navigation.navigate('DriversLicense')}
+          onPress={() => navigation.navigate('BasicInfo')}
           isCompleted={driverVerificationData.driversLicense}
         />
         <VerificationItem 
           title="Carta de antecedentes Penales/Policiales"
           icon="file-document-outline"
-          onPress={() => navigation.navigate('BackgroundCheck')}
+          onPress={() => navigation.navigate('BasicInfo')}
           isCompleted={driverVerificationData.backgroundCheck}
         />
         <VerificationItem 
           title="Información acerca del vehículo"
           icon="car-outline"
-          onPress={() => navigation.navigate('VehicleInfo')}
+          onPress={() => navigation.navigate('BasicInfo')}
           isCompleted={driverVerificationData.vehicleInfo}
         />
         <VerificationItem 
           title="Cuenta Bancaria"
           icon="bank-outline"
-          onPress={() => navigation.navigate('BankAccount')}
+          onPress={() => navigation.navigate('BasicInfo')}
           isCompleted={driverVerificationData.bankAccount}
         />
 
